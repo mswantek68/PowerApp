@@ -508,9 +508,10 @@
 
     Button2 As button:
         OnSelect: |
-            =ClearCollect(pdfparameters,{InvoiceID:InvoiceID,ConsumptionStartDate:ConsumptionStart.Text,ConsumptionEndDate:ConsumptionEnd.Text,Cost:Cost.Text,EnergyProviderName:EnergyProviderName.Text,Facility:facility_Sink.Text,Name:Name.Text,TransactionDueDate:TransDate.Text,OrganizationalUnit:OrgUnitSelect.Selected.Value,Quantity:Quantity.Text,Scope:ScopeSelect.Selected.Value,Category:CategorySelect.Selected.Value,InvoiceLocation:InvoiceLocationValue.Text,DataAnalyst:DataStewardInput.Text,DataOwner:DataOwnerInput.SelectedItems,Filename:DataAssetNameInput.Text,DatasetType:DataSetTypeInput.Selected.Value});
-            Set(pdfjson,JSON(pdfparameters));
-            PassParameters.Run(pdfjson,
+            =ClearCollect(pdfparameters,{InvoiceID:InvoiceID,ConsumptionStartDate:ConsumptionStart.Text,ConsumptionEndDate:ConsumptionEnd.Text,Cost:Cost.Text,EnergyProviderName:EnergyProviderName.Text,Facility:facility_Sink.Text,Name:Name.Text,TransactionDueDate:TransDate.Text,OrganizationalUnit:OrgUnitSelect.Selected.Value,Quantity:Quantity.Text,Scope:ScopeSelect.Selected.Value,Category:CategorySelect.Selected.Value,InvoiceLocation:InvoiceLocationValue.Text,DataAnalyst:DataStewardInput.Text,DataOwner:DataOwnerInput.SelectedItems,Filename:DataAssetNameInput.Text,DatasetType:DataSetTypeInput.Selected.Value}
+            );
+            
+            PassParameters.Run(JSON(pdfjson));            
         Text: ="Submit"
         X: =1160
         Y: =698

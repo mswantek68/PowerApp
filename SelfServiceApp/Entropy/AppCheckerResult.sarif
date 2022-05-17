@@ -23,9 +23,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charOffset": 668,
+                  "charLength": 7,
+                  "charOffset": 632,
                   "snippet": {
-                    "text": ""
+                    "text": "pdfjson"
                   }
                 }
               },
@@ -37,12 +38,15 @@
             }
           ],
           "message": {
+            "arguments": [
+              "pdfjson"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrOperandExpected",
+          "ruleId": "app-ErrInvalidName",
           "ruleIndex": 0
         },
         {
@@ -59,9 +63,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charOffset": 668,
+                  "charLength": 13,
+                  "charOffset": 627,
                   "snippet": {
-                    "text": ""
+                    "text": "JSON(pdfjson)"
                   }
                 }
               },
@@ -74,15 +79,15 @@
           ],
           "message": {
             "arguments": [
-              "ParenClose",
-              "Eof"
+              "Record",
+              "Text"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
           "ruleIndex": 1
         },
         {
@@ -99,10 +104,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 657,
+                  "charLength": 33,
+                  "charOffset": 608,
                   "snippet": {
-                    "text": "("
+                    "text": "PassParameters.Run(JSON(pdfjson))"
                   }
                 }
               },
@@ -115,15 +120,14 @@
           ],
           "message": {
             "arguments": [
-              "2",
-              "1"
+              "Run"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrBadArity",
+          "ruleId": "app-ErrInvalidArgs-Func",
           "ruleIndex": 2
         },
         {
@@ -1780,36 +1784,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.pdfjson"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.pdfjson",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "pdfjson",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Add Metadata Screen'.PdfViewer3.Document"
                 }
               ],
@@ -1992,16 +1966,16 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrOperandExpected",
+              "id": "app-ErrInvalidName",
               "messageStrings": {
                 "issue": {
-                  "text": "Expected an operand. The formula or expression expects a valid operand. For example, you can add the operand '2' to the expression ' 1 +_' so that the result is '3'. Or, you can add the operand \"there\" to the expression '\"Hi \"& _ ' so that the result is 'Hi there'."
+                  "text": "Name isn't valid. '{0}' isn't recognized."
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Supply an operand value that will complete the expression. Ensure that the operand's type (text, number, date, or true/false) fits the expression. Match numbers with numbers, text with text, and so on. For example, '1 + \"Hi\"' isn't valid, but '1 + 2' is valid."
+                  "Remove or correct the reference to the name that isn't valid."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",
@@ -2009,27 +1983,24 @@
               }
             },
             {
-              "id": "app-ErrExpectedFound-Ex-Fnd",
+              "id": "app-ErrBadType-ExpectedType-ProvidedType",
               "messageStrings": {
                 "issue": {
-                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
+                  "text": "Invalid argument type ({1}). Expecting a {0} value instead."
                 }
               },
               "properties": {
                 "componentType": "app",
-                "howToFix": [
-                  "Remove or replace the unexpected characters with an expected character."
-                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
             },
             {
-              "id": "app-ErrBadArity",
+              "id": "app-ErrInvalidArgs-Func",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid number of arguments: received {0}, expected {1}."
+                  "text": "The function '{0}' has some invalid arguments."
                 }
               },
               "properties": {
