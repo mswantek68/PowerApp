@@ -245,7 +245,7 @@
 
     SinkFileSystemInput As text:
         BorderColor: =RGBA(54, 176, 75, 1)
-        Default: ="pdfincoming"
+        Default: ="pdfprocessed"
         FontWeight: =FontWeight.Lighter
         X: =863
         Y: =358
@@ -290,7 +290,7 @@
 
     SourceFolderPathInput As text:
         BorderColor: =RGBA(54, 176, 75, 1)
-        Default: =
+        Default: ="Location1"
         X: =40
         Y: =435
         ZIndex: =36
