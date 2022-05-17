@@ -83,6 +83,7 @@
         ZIndex: =10
 
     Arrow1_1 As arrow:
+        DisplayMode: =If(IsBlank(DataAssetNameInput.Text) || IsBlank(DataOwnerInput.SelectedItems) || IsBlank(DataSetTypeInput.SelectedText) || IsBlank(AddMediaWithImage1),DisplayMode.Disabled,DisplayMode.Edit)
         OnSelect: =Navigate('Add Metadata Screen')
         X: =1278
         Y: =690
@@ -102,7 +103,7 @@
         Text: ="Next Step"
         Width: =95
         X: =1183
-        Y: =695
+        Y: =700
         ZIndex: =13
 
     ManualEnterCheckbox As checkbox:
