@@ -699,7 +699,14 @@
           "NameMapSourceSchema": "?"
         },
         "Role",
-        "Color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "Color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         "PressedColor",
         "HoverColor",
@@ -931,7 +938,14 @@
         {
           "Category": "Design",
           "PropertyName": "Color",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "Unknown",
+          "TaggedRuleArray": [
+            {
+              "InvariantScript": "RGBA(255, 0, 0, 1)",
+              "Property": "Color",
+              "Tag": "{\"start\":34,\"limit\":35}"
+            }
+          ]
         },
         {
           "Category": "Design",
@@ -1230,7 +1244,14 @@
           "NameMapSourceSchema": "?"
         },
         "Role",
-        "Color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "Color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         "PressedColor",
         "HoverColor",
@@ -1317,7 +1338,14 @@
         {
           "Category": "Design",
           "PropertyName": "Color",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "Unknown",
+          "TaggedRuleArray": [
+            {
+              "InvariantScript": "RGBA(255, 0, 0, 1)",
+              "Property": "Color",
+              "Tag": "{\"start\":16,\"limit\":17}"
+            }
+          ]
         },
         {
           "Category": "Design",
@@ -1805,7 +1833,14 @@
           "NameMapSourceSchema": "?"
         },
         "Role",
-        "Color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "Color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         "PressedColor",
         "HoverColor",
@@ -2037,7 +2072,14 @@
         {
           "Category": "Design",
           "PropertyName": "Color",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "Unknown",
+          "TaggedRuleArray": [
+            {
+              "InvariantScript": "RGBA(255, 0, 0, 1)",
+              "Property": "Color",
+              "Tag": "{\"start\":11,\"limit\":12}"
+            }
+          ]
         },
         {
           "Category": "Design",
@@ -3529,7 +3571,14 @@
           "NameMapSourceSchema": "?"
         },
         "Role",
-        "Color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+          "InvariantPropertyName": "Color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         "PressedColor",
         "HoverColor",
@@ -3761,7 +3810,14 @@
         {
           "Category": "Design",
           "PropertyName": "Color",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "Unknown",
+          "TaggedRuleArray": [
+            {
+              "InvariantScript": "RGBA(255, 0, 0, 1)",
+              "Property": "Color",
+              "Tag": "{\"start\":13,\"limit\":14}"
+            }
+          ]
         },
         {
           "Category": "Design",

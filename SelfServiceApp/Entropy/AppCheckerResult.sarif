@@ -1837,6 +1837,36 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Opening Screen'.SinkFolderPathInput.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Opening Screen'.SinkFolderPathInput.Default",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "Opening Screen",
+                "type": "'Opening Screen'.SinkFolderPathInput"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
         }
       ],
       "tool": {
