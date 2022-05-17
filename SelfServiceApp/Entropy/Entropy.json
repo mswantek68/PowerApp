@@ -139,7 +139,7 @@
     "VendorNameValue": 29
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/17/2022 23:11:39",
+  "HeaderLastSavedDateTimeUTC": "05/17/2022 23:13:31",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0bfe23c1-b79e-499a-bb2c-3f7349462409": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c90c171cf512b7513128482759b18d9a-0c5779d4c1ca4b35\"",
@@ -161,14 +161,15 @@
     "AzureBlobStorage": 3,
     "AzureBlobStorage_1": 1,
     "AzureBlobStorage_2": 6,
-    "ComboBoxSample": 10,
-    "CustomGallerySample": 8,
-    "DropDownSample": 7,
+    "AzureBlobStorage_3": 7,
+    "ComboBoxSample": 11,
+    "CustomGallerySample": 9,
+    "DropDownSample": 8,
     "Office365Users": 2,
     "PassParameters": 4,
     "PassParametersToControl": 5,
     "PdfFlow": 0,
-    "RadioSample": 9
+    "RadioSample": 10
   },
   "OrderGroupControls": {
     "AddMediaWithImage1": {
@@ -410,7 +411,7 @@
   },
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.9769679,
+    "AnalysisLoadTime": 1.0058452,
     "ControlCount": {
       "addMedia": 1,
       "arrow": 3,
@@ -429,7 +430,7 @@
       "screen": 5,
       "text": 28
     },
-    "DeserializationLoadTime": 1.6384312,
+    "DeserializationLoadTime": 1.5948223,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true

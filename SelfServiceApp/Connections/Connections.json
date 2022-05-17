@@ -224,7 +224,8 @@
     },
     "datasets": {},
     "dataSources": [
-      "AzureBlobStorage"
+      "AzureBlobStorage",
+      "AzureBlobStorage_3"
     ],
     "dependencies": {},
     "dependents": [
