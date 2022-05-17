@@ -135,7 +135,7 @@
     "VendorNameValue": 25
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/17/2022 02:36:23",
+  "HeaderLastSavedDateTimeUTC": "05/17/2022 12:10:40",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "07c9d530-0511-4f24-a304-8d3d342f4b81": "\"/providers/microsoft.powerapps/apis/shared_azuredatalake/connections/278107fa4ac64a1a81b349be52c67b5e\"",
@@ -143,6 +143,7 @@
     "1baf780b-57da-4402-8a7b-39bebb28c8f8": "\"/providers/microsoft.powerapps/apis/shared_commondataserviceforapps/connections/shared-commondataser-448eb4d4-31c2-424c-8c39-d7436f97bb83\"",
     "2f31c3b2-502d-46e4-ab53-18ce3b41f915": "\"/providers/microsoft.powerapps/apis/shared_office365users/connections/shared-office365user-09982c1c-3680-4cf4-a479-40d8fb408e93\"",
     "601c7dfb-2908-489e-834f-d65948f2b37d": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/4175492e2a4b1c377e1eb823301ac371-0c5779d4c1ca4b35\"",
+    "6fe07240-3901-45a0-afa4-91092832532d": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/abec6b757e68124930f39b891523a9f9-0c5779d4c1ca4b35\"",
     "99d13012-5e91-4f97-8a07-24bc2aa0f273": "\"/providers/microsoft.powerapps/apis/shared_azureblob/connections/9cfc53339a6548fbb6fc8362f9f394e7\"",
     "eaa89d94-a8e4-46fa-b0a4-28f1f63e7caf": "\"/providers/microsoft.powerapps/apis/shared_azureblob/connections/cfcb8c9d8bd94cfb82a799232ee36845\""
   },
@@ -154,14 +155,15 @@
   "OrderDataSource": {
     "AzureBlobStorage": 1,
     "AzureDataLake": 3,
-    "ComboBoxSample": 8,
-    "CustomGallerySample": 6,
-    "DropDownSample": 5,
+    "ComboBoxSample": 9,
+    "CustomGallerySample": 7,
+    "DropDownSample": 6,
     "Office365Users": 2,
     "PassParameters": 4,
+    "PassParametersToControl": 5,
     "PdfFlow": 0,
-    "pdfparameters": 9,
-    "RadioSample": 7
+    "pdfparameters": 10,
+    "RadioSample": 8
   },
   "OrderGroupControls": {
     "AddMediaWithImage1": {
@@ -398,7 +400,7 @@
   },
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.8655141,
+    "AnalysisLoadTime": 0.9282207,
     "ControlCount": {
       "addMedia": 1,
       "arrow": 3,
@@ -416,7 +418,7 @@
       "screen": 4,
       "text": 28
     },
-    "DeserializationLoadTime": 2.0923086,
+    "DeserializationLoadTime": 1.4427906,
     "ErrorCount": 3
   },
   "WasLocalDatabaseReferencesEmpty": true

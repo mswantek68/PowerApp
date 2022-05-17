@@ -24,7 +24,7 @@
                 },
                 "region": {
                   "charLength": 7,
-                  "charOffset": 632,
+                  "charOffset": 628,
                   "snippet": {
                     "text": "pdfjson"
                   }
@@ -64,7 +64,7 @@
                 },
                 "region": {
                   "charLength": 13,
-                  "charOffset": 627,
+                  "charOffset": 623,
                   "snippet": {
                     "text": "JSON(pdfjson)"
                   }
@@ -105,7 +105,7 @@
                 },
                 "region": {
                   "charLength": 33,
-                  "charOffset": 608,
+                  "charOffset": 604,
                   "snippet": {
                     "text": "PassParameters.Run(JSON(pdfjson))"
                   }
