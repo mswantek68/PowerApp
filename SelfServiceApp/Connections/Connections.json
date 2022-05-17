@@ -45,6 +45,26 @@
     "dependents": [],
     "id": "0bfe23c1-b79e-499a-bb2c-3f7349462409"
   },
+  "1821b1cf-04dc-481f-8fa8-abbf3b551fdb": {
+    "connectionParameters": {
+      "accountName": "mcfsdeveunblob01",
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Azure Blob Storage",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/azureblob/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_azureblob",
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_azureblob/connections/shared-azureblob-fd6ea19e-f366-4ae5-9505-dc3654d8fcf3",
+      "xrmConnectionReferenceLogicalName": "new_sharedazureblob_987a1"
+    },
+    "datasets": {},
+    "dataSources": [
+      "AzureBlobStorage_2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "1821b1cf-04dc-481f-8fa8-abbf3b551fdb"
+  },
   "1baf780b-57da-4402-8a7b-39bebb28c8f8": {
     "connectionParameters": {
       "sku": "Enterprise"
