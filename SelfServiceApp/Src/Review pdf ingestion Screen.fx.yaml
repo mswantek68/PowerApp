@@ -506,20 +506,11 @@
         Y: =12
         ZIndex: =51
 
-    Button2 As button:
-        OnSelect: |
-            =ClearCollect(pdfparameters,{InvoiceID:InvoiceID,ConsumptionStartDate:ConsumptionStart.Text,ConsumptionEndDate:ConsumptionEnd.Text,Cost:Cost.Text,EnergyProviderName:EnergyProviderName.Text,Facility:facility_Sink.Text,Name:Name.Text,TransactionDueDate:TransDate.Text,OrganizationalUnit:OrgUnitSelect.Selected.Value,Quantity:Quantity.Text,Scope:ScopeSelect.Selected.Value,Category:CategorySelect.Selected.Value,InvoiceLocation:InvoiceLocationValue.Text,DataAnalyst:DataStewardInput.Text,DataOwner:DataOwnerInput.SelectedItems,Filename:DataAssetNameInput.Text,DatasetType:DataSetTypeInput.Selected.Value});
-            PassParameters.Run(JSON(pdfjson));            
-        Text: ="Submit"
-        X: =1160
-        Y: =698
-        ZIndex: =52
-
     Button3 As button:
         OnSelect: |-
             =PassParametersToControl.Run({InvoiceID:InvoiceID,ConsumptionStartDate:ConsumptionStart.Text,ConsumptionEndDate:ConsumptionEnd.Text,Cost:Cost.Text,EnergyProviderName:EnergyProviderName.Text,Facility:facility_Sink.Text,Name:Name.Text,TransactionDueDate:TransDate.Text,OrganizationalUnit:OrgUnitSelect.Selected.Value,Quantity:Quantity.Text,Scope:ScopeSelect.Selected.Value,Category:CategorySelect.Selected.Value,InvoiceLocation:InvoiceLocationValue.Text,DataAnalyst:DataStewardInput.Text,DataOwner:DataOwnerInput.SelectedItems,Filename:DataAssetNameInput.Text,DatasetType:DataSetTypeInput.Selected.Value,SinkFileSystem: SinkFileSystemInput.Text,SinkFolderPath: SinkFolderPathInput.Text,SourceContainerName: SourceContainerInput.Text,SourceFolderPath: SourceFolderPathInput.Text})
-        Text: ="Button"
-        X: =909
-        Y: =698
+        Text: ="Submit"
+        X: =1148
+        Y: =700
         ZIndex: =53
 
