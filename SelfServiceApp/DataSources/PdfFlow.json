@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "ad5a2470-b81f-4d0b-915c-f75cbb6e191a",
+    "Name": "PdfFlow",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "c1c4c6af-0ccc-ec11-a7b5-000d3a32e400"
+  }
+]

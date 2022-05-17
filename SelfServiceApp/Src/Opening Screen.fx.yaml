@@ -1,0 +1,289 @@
+"'Opening Screen' As screen":
+
+    AddMediaWithImage1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =3
+
+        UploadedImage1 As image:
+            BorderThickness: =3
+            Height: =50
+            Image: =If(IsBlank(AddMediaButton1.Media), SampleImage, AddMediaButton1.Media)
+            ImagePosition: =ImagePosition.Fill
+            Visible: =If(ManualEnterCheckbox.Value = true,false,true)
+            Width: =190
+            X: =AddMediaButton1.X
+            Y: =210
+            ZIndex: =4
+
+        AddMediaButton1 As addMedia:
+            BorderThickness: =3
+            ChangePictureText: ="Select Invoice"
+            Height: =50
+            Size: =12
+            Text: ="Select Invoice"
+            Visible: =If(ManualEnterCheckbox.Value = true,false,true)
+            Width: =190
+            X: =1101
+            Y: =210
+            ZIndex: =5
+
+    DataAssetNameLabel As label:
+        Text: ="Data Asset Name"
+        X: =40
+        Y: =100
+        ZIndex: =6
+
+    DataAssetNameInput As text:
+        Default: =""
+        HintText: =""
+        X: =40
+        Y: =135
+        ZIndex: =7
+
+    dataanalystLabel As label:
+        Height: =42
+        Text: ="Local Sustainability Data Analyst"
+        Width: =343
+        X: =543
+        Y: =180
+        ZIndex: =9
+
+    DataStewardInput As text:
+        Default: =User().FullName
+        X: =543
+        Y: =220
+        ZIndex: =10
+
+    DataOwnerLabel As label:
+        Text: ="Data Owner"
+        X: =40
+        Y: =180
+        ZIndex: =15
+
+    InvoiceLocationLabel As label:
+        Height: =44
+        Text: ="Data Source Name"
+        Visible: =If(ManualEnterCheckbox.Value =true,false,true)
+        Width: =233
+        X: =543
+        Y: =100
+        ZIndex: =16
+
+    InvoiceLocationValue As text:
+        Default: =""
+        HintText: =""
+        Visible: =If(ManualEnterCheckbox.Value =true,false,true)
+        X: =543
+        Y: =135
+        ZIndex: =17
+
+    Arrow1_1 As arrow:
+        OnSelect: =Navigate('Add Metadata Screen')
+        X: =1278
+        Y: =690
+        ZIndex: =18
+
+    Label11 As label:
+        FontWeight: =Bold
+        Height: =86
+        Size: =18
+        Text: ="Data Contract Registration"
+        Width: =388
+        X: =543
+        ZIndex: =21
+
+    Label12 As label:
+        Align: =Right
+        Text: ="Next Step"
+        X: =1116
+        Y: =695
+        ZIndex: =22
+
+    ManualEnterCheckbox As checkbox:
+        Text: ="Manually Enter Data"
+        Width: =217
+        X: =1144
+        Y: =18
+        ZIndex: =23
+
+    DataOwnerInput As combobox:
+        DisplayFields: =["DisplayName","Mail"]
+        InputTextPlaceholder: =
+        Items: |-
+            =Office365Users.SearchUser({searchTerm:DataOwnerInput.SearchText,top:10})
+        SearchFields: =["DisplayName"]
+        SearchItems: |-
+            =Search(Office365Users.SearchUser({searchTerm:DataOwnerInput.SearchText,top:10}),DataOwnerInput.SearchText,"DisplayName")
+        Template: =ListItemTemplate.Person
+        X: =40
+        Y: =220
+        ZIndex: =24
+
+    DescriptionLabel As label:
+        Height: =44
+        Text: ="Description"
+        Visible: =If(ManualEnterCheckbox.Value =true,false,true)
+        Width: =233
+        X: =971
+        Y: =100
+        ZIndex: =25
+
+    DescriptionInput As text:
+        Default: =""
+        HintText: =""
+        Visible: =If(ManualEnterCheckbox.Value =true,false,true)
+        X: =971
+        Y: =135
+        ZIndex: =26
+
+    Label11_1 As label:
+        Height: =41
+        Size: =14
+        Text: ="Data Asset Information"
+        Underline: =true
+        Width: =275
+        X: =40
+        Y: =68
+        ZIndex: =27
+
+    Label11_2 As label:
+        Height: =41
+        Size: =14
+        Text: ="Data Asset Technical Information"
+        Underline: =true
+        Width: =320
+        X: =40
+        Y: =281
+        ZIndex: =28
+
+    SourceContainerInputLabel As label:
+        Text: ="Source Container Name"
+        X: =40
+        Y: =327
+        ZIndex: =29
+
+    FrequencyLabel As label:
+        Text: ="Frequency"
+        X: =433
+        Y: =327
+        ZIndex: =30
+
+    StartDateLabel As label:
+        Text: ="Start Date"
+        X: =40
+        Y: =508
+        ZIndex: =31
+
+    SourceContainerInput As text:
+        Default: =""
+        X: =40
+        Y: =379
+        ZIndex: =32
+
+    FrequencyDropDown As dropdown:
+        Default: =
+        Items: =["","Hourly","Daily","Weekly","Monthly"]
+        X: =428
+        Y: =379
+        ZIndex: =33
+
+    StartDateInput As datepicker:
+        X: =43
+        Y: =550
+        ZIndex: =34
+
+    StartTimeLabel As label:
+        Text: ="Start Time"
+        X: =428
+        Y: =513
+        ZIndex: =35
+
+    StartTimeInput As dropdown:
+        Default: |-
+            ="6:00 AM"
+        Items: |-
+            =["12:00 AM","12:30 AM","1:00 AM","1:30 AM","2:00 AM","2:30 AM","3:00 AM","3:30 AM","4:00 AM","4:30 AM","5:00 AM","5:30 AM","6:00 AM","6:30 AM","7:00 AM","7:30 AM","8:00 AM","8:30 AM","9:00 AM","9:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 PM","12:30 PM","1:00 PM","1:30 PM","2:00 PM","2:30 PM","3:00 PM","3:30 PM","4:00 PM","4:30 PM","5:00 PM","5:30 PM","6:00 PM","6:30 PM","7:00 PM","7:30 PM","8:00 PM","8:30 PM","9:00 PM","9:30 PM","10:00 PM","10:30 PM","11:00 PM","11:30 PM"]
+        X: =428
+        Y: =550
+        ZIndex: =37
+
+    SinkFileSystemLabel As label:
+        Text: ="Sink File System name"
+        Width: =195
+        X: =863
+        Y: =327
+        ZIndex: =38
+
+    DataPublishHourLabel As label:
+        Text: ="Data Publish Hour"
+        Width: =200
+        X: =428
+        Y: =610
+        ZIndex: =40
+
+    SinkFileSystemInput As text:
+        Default: =""
+        X: =863
+        Y: =379
+        ZIndex: =41
+
+    DataPublishDayLabel As label:
+        Text: ="Data Publish Day"
+        X: =40
+        Y: =608
+        ZIndex: =44
+
+    DataPublishDayInput As dropdown:
+        Default: =" "
+        Items: =["","Day","Weekday","Weekend Day","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+        X: =40
+        Y: =650
+        ZIndex: =45
+
+    SinkFolderPathLabel As label:
+        Text: ="Sink Folder Path"
+        X: =863
+        Y: =424
+        ZIndex: =46
+
+    SinkFolderPathInput As text:
+        Default: =""
+        X: =863
+        Y: =456
+        ZIndex: =47
+
+    SourceFolderPathLabel As label:
+        Text: ="Source Folder Path"
+        Width: =224
+        X: =40
+        Y: =419
+        ZIndex: =48
+
+    SourceFolderPathInput As text:
+        Default: =""
+        X: =40
+        Y: =456
+        ZIndex: =49
+
+    DataPublishHourInput As dropdown:
+        Default: =""
+        Items: =["","0000","0100","0200","0300","0400","0500","0600","0700","0800","0900","1000","1100","1200","1300","1400","1500","1600","1700","1800","1900","2000","2100","2200","2300","2400"]
+        X: =428
+        Y: =650
+        ZIndex: =50
+
+    DataSetTypeLabel As label:
+        Text: ="Dataset Type"
+        X: =428
+        Y: =420
+        ZIndex: =51
+
+    DataSetTypeInput As dropdown:
+        Items: =["","PDF","Excel","SQL"]
+        X: =428
+        Y: =456
+        ZIndex: =52
+

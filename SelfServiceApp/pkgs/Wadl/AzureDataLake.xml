@@ -1,0 +1,182 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/azuredatalake" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="AzureDataLake" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Azure Data Lake">Azure Data Lake Store connector allows you to read and add data to an Azure Data Lake account.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/azuredatalake" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <object name="folderResponse_FileStatuses_def">
+        <property name="FileStatus" typeRef="fileStatusArray" />
+      </object>
+      <object name="folderResponse">
+        <property name="FileStatuses" typeRef="folderResponse_FileStatuses_def" />
+      </object>
+      <string name="fileStatusArray_items_def_pathSuffix_def" />
+      <string name="fileStatusArray_items_def_type_def" />
+      <integer name="fileStatusArray_items_def_blockSize_def" />
+      <integer name="fileStatusArray_items_def_accessTime_def" />
+      <integer name="fileStatusArray_items_def_modificationTime_def" />
+      <object name="fileStatusArray_items_def">
+        <property name="pathSuffix" type="string" />
+        <property name="type" type="string" />
+        <property name="blockSize" type="integer" />
+        <property name="accessTime" type="integer" />
+        <property name="modificationTime" type="integer" />
+      </object>
+      <array typeRef="fileStatusArray_items_def" name="fileStatusArray" />
+      <boolean name="operationPerformed_boolean_def" />
+      <object name="operationPerformed">
+        <property name="boolean" type="boolean" />
+      </object>
+      <string name="AppendFile_Concurrent_param_body_def" />
+      <string name="AppendFile_Concurrent_responses_200_def" />
+      <string name="ReadFile_responses_200_def" />
+      <string name="UploadFile_param_body_def" />
+      <string name="AppendFile_Sequential_param_body_def" />
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/azuredatalake">
+    <resource path="/{connectionId}/store/folders/webhdfs/v1/">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="ListFiles" actionName="ListFiles" visibility="advanced" siena:isDeprecated="false">
+        <doc title="List Files&#xA;List files and folders in a Data Lake Store account." />
+        <request>
+          <param style="query" name="account" type="xs:string" required="true">
+            <doc title="Account name for Azure Data Lake." />
+          </param>
+          <param style="query" name="op" type="xs:string" required="true" fixed="LISTSTATUS" />
+          <param style="query" name="path" type="xs:string">
+            <doc title="Path of the folder (no leading '/')." />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:folderResponse" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/store/folders/webhdfs/v1/">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="PUT" id="CreateFolder" actionName="CreateFolder" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Create Folder&#xA;Create a folder in a Data Lake Store account." />
+        <request>
+          <param style="query" name="account" type="xs:string" required="true">
+            <doc title="Account name for Azure Data Lake." />
+          </param>
+          <param style="query" name="op" type="xs:string" required="true" fixed="MKDIRS" />
+          <param style="query" name="path" type="xs:string" required="true">
+            <doc title="Path of the folder to create (no leading '/')." />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:operationPerformed" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/webhdfsext/{filepath}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="filepath" type="xs:string" required="true">
+        <doc title="Path of the file (no leading '/')." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="AppendFileConcurrent" actionName="AppendFile_Concurrent" visibility="important" siena:isDeprecated="false">
+        <doc title="Append File (concurrent)&#xA;Concurrent append to a file." />
+        <request>
+          <param style="query" name="account" type="xs:string" required="true">
+            <doc title="Account name for Azure Data Lake." />
+          </param>
+          <param style="query" name="op" type="xs:string" required="true" fixed="concurrentappend" />
+          <param style="query" name="appendMode" type="xs:string" default="autocreate">
+            <doc title="Set to auto-create if path doesn't exist." />
+            <option value="autocreate" />
+            <option value="" />
+          </param>
+          <representation mediaType="application/octet-stream" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="xs:string" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/webhdfs/v1/{filepath}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="filepath" type="xs:string" required="true">
+        <doc title="Path of the file (no leading '/')." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="ReadFile" actionName="ReadFile" visibility="important" siena:isDeprecated="false">
+        <doc title="Read File&#xA;Read data from a Data Lake Store account." />
+        <request>
+          <param style="query" name="account" type="xs:string" required="true">
+            <doc title="Account name for Azure Data Lake." />
+          </param>
+          <param style="query" name="op" type="xs:string" required="true" fixed="OPEN" />
+          <param style="query" name="read" type="xs:string" required="true" fixed="true" />
+        </request>
+        <response>
+          <representation mediaType="application/octet-stream" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/webhdfs/v1/{filepath}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="filepath" type="xs:string" required="true">
+        <doc title="Path of the file (no leading '/')." />
+      </param>
+      <method siena:requiresAuthentication="true" name="PUT" id="UploadFile" actionName="UploadFile" visibility="important" siena:isDeprecated="false">
+        <doc title="Upload File&#xA;Upload data into a Data Lake Store account." />
+        <request>
+          <param style="query" name="account" type="xs:string" required="true">
+            <doc title="Account name for Azure Data Lake." />
+          </param>
+          <param style="query" name="op" type="xs:string" required="true" fixed="CREATE" />
+          <param style="query" name="write" type="xs:string" required="true" fixed="true" />
+          <param style="query" name="overwrite" type="xs:boolean" default="false">
+            <doc title="Overwrite if existing file." />
+          </param>
+          <representation mediaType="application/octet-stream" />
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/webhdfs/v1/{filepath}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="filepath" type="xs:string" required="true">
+        <doc title="Path of the file (no leading '/')." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="AppendFileSequential" actionName="AppendFile_Sequential" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Append File (sequential)&#xA;Append to a file serially." />
+        <request>
+          <param style="query" name="account" type="xs:string" required="true">
+            <doc title="Account name for Azure Data Lake." />
+          </param>
+          <param style="query" name="op" type="xs:string" required="true" fixed="APPEND" />
+          <param style="query" name="append" type="xs:string" required="true" fixed="true" />
+          <param style="query" name="offset" type="xs:long">
+            <doc title="The optional offset in the stream to begin the append operation. Leave it empty or set value to file size in bytes. In both cases, the operation appends at the end of the stream." />
+          </param>
+          <representation mediaType="application/octet-stream" />
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/webhdfs/v1/{filepath}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="filepath" type="xs:string" required="true">
+        <doc title="Path of the file (no leading '/')." />
+      </param>
+      <method siena:requiresAuthentication="true" name="DELETE" id="DeleteFile" actionName="DeleteFile" visibility="advanced" siena:isDeprecated="false">
+        <doc title="Delete File&#xA;Delete a file from a Data Lake Store account." />
+        <request>
+          <param style="query" name="account" type="xs:string" required="true">
+            <doc title="Account name for Azure Data Lake." />
+          </param>
+          <param style="query" name="op" type="xs:string" required="true" fixed="DELETE" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:operationPerformed" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_azuredatalake" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

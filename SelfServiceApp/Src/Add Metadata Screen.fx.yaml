@@ -1,0 +1,115 @@
+"'Add Metadata Screen' As screen":
+
+    Button1 As button:
+        Height: =60
+        OnSelect: |-
+            =Set(VarBody, AzureBlobStorage.CreateFile("pdfincoming",DataAssetNameInput.Text,AddMediaButton1.Media));
+            Set(FlowResults,PdfFlow.Run(AddMediaButton1.Media));
+            Set(ServiceStartDate,FlowResults.servicestart);
+            Set(ServiceEndDate,FlowResults.serviceend);
+            Set(CustomerCharge,FlowResults.customercharge);
+            Set(VendorName,FlowResults.vendorname);
+            Set(CustomerName,FlowResults.customername);
+            Set(InvoiceDate,FlowResults.invoicedate);
+            Set(InvoiceID,FlowResults.invoiceid);
+            Set(GasDistribution,FlowResults.gasdistribution);
+            Set(ServiceStartConfidence,FlowResults.servicestartconfidence);
+            Set(ServiceEndConfidence,FlowResults.serviceendconfidence);
+            Set(CustomerChargeConfidence,FlowResults.customerchargeconfidence);
+            Set(VendorNameConfidence,FlowResults.vendornameconfidence);
+            Set(CustomerNameConfidence,FlowResults.customernameconfidence);
+            Set(InvoiceDateConfidence,FlowResults.invoicedateconfidence);
+            Navigate('Review pdf ingestion Screen',ScreenTransition.Fade)
+        Text: ="Submit for analysis"
+        Width: =175
+        X: =1144
+        Y: =684
+        ZIndex: =4
+
+    OrgUnitSelect As dropdown:
+        Default: =1
+        Items: =["","Contoso Africa","Contoso AG","Contoso APAC","Contoso EUR"]
+        Tooltip: ="Enter your Organizational Unit from the dropdown. If your Organizational Group is not displayed, contact your system administrator."
+        X: =16
+        Y: =111
+        ZIndex: =12
+
+    Label3 As label:
+        Text: ="Org Unit"
+        X: =16
+        Y: =69
+        ZIndex: =13
+
+    FacilitySelect As dropdown:
+        Items: =["","Contoso Factory","Contoso Warehouse","Contoso Pod Factory 1","Contoso Pod Factory 2", "Contoso Pod Factory 3"]
+        X: =16
+        Y: =188
+        ZIndex: =14
+
+    Label3_1 As label:
+        Text: ="Facility"
+        X: =16
+        Y: =153
+        ZIndex: =15
+
+    ScopeSelect As dropdown:
+        Default: =""
+        Items: =["","Scope 1","Scope 2","Scope 3"]
+        X: =16
+        Y: =265
+        ZIndex: =16
+
+    Label3_2 As label:
+        Text: ="Scope"
+        X: =16
+        Y: =230
+        ZIndex: =17
+
+    CategorySelect As dropdown:
+        Items: =["","Purchased Cooling","Purchased Electricity","Purchased Heat","Purchased Steam"]
+        X: =16
+        Y: =342
+        ZIndex: =18
+
+    Label3_3 As label:
+        Text: ="Category"
+        X: =16
+        Y: =307
+        ZIndex: =19
+
+    CategoryTypeSelect As dropdown:
+        Items: =[""]
+        X: =16
+        Y: =417
+        ZIndex: =20
+
+    Label3_4 As label:
+        Text: ="Category Type"
+        X: =16
+        Y: =382
+        ZIndex: =21
+
+    Arrow1 As arrow:
+        OnSelect: =Navigate('Review pdf ingestion Screen')
+        X: =1286
+        Y: =31
+        ZIndex: =22
+
+    PdfViewer3 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =AddMediaButton1.Media
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =666
+        Width: =675
+        X: =406
+        Y: =69
+        ZIndex: =23
+
+    Icon2 As icon.BackArrow:
+        Height: =41
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate('Opening Screen')
+        Width: =44
+        Y: =8
+        ZIndex: =24
+

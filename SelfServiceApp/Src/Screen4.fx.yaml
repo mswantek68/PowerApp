@@ -1,0 +1,26 @@
+Screen4 As screen:
+
+    Label4 As label:
+        Text: ="VarBody.ID"
+        X: =404
+        Y: =40
+        ZIndex: =1
+
+    TextInput3 As text:
+        Default: =VarBody.Id
+        X: =554
+        Y: =40
+        ZIndex: =2
+
+    Label4_1 As label:
+        Text: ="VarBody.name"
+        X: =404
+        Y: =124
+        ZIndex: =3
+
+    TextInput3_1 As text:
+        Default: =VarBody.Name
+        X: =554
+        Y: =124
+        ZIndex: =4
+

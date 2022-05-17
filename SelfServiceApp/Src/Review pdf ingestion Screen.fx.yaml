@@ -1,0 +1,525 @@
+"'Review pdf ingestion Screen' As screen":
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        BorderThickness: =2
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =601
+        Width: =836
+        X: =484
+        Y: =76
+        ZIndex: =1
+
+    PdfViewer2 As pdfViewer:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Document: =AddMediaButton1.Media
+        Fill: =RGBA(0, 0, 0, 0.5)
+        Height: =601
+        Width: =431
+        X: =20
+        Y: =73
+        ZIndex: =2
+
+    Arrow2 As arrow.backArrow:
+        OnSelect: =Navigate('Add Metadata Screen')
+        X: =20
+        Y: =12
+        ZIndex: =3
+
+    Icon1 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =106
+        ZIndex: =41
+
+    Icon1_1 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =168
+        ZIndex: =42
+
+    Icon1_2 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =230
+        ZIndex: =43
+
+    Icon1_3 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =292
+        ZIndex: =44
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_1 As label:
+            DisabledBorderColor: =
+            Text: ="Service Start"
+            X: =510
+            Y: =106
+            ZIndex: =6
+
+        ServiceStartValue As text:
+            BorderColor: =If(ServiceStartConfidence >=0.85,Green)
+            Default: =ServiceStartDate
+            DisabledBorderColor: =
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =106
+            ZIndex: =8
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_2 As label:
+            Text: ="Service End"
+            X: =510
+            Y: =168
+            ZIndex: =7
+
+        ServiceEndValue As text:
+            Default: =ServiceEndDate
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =168
+            ZIndex: =9
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_6 As label:
+            Text: ="Customer Charge"
+            X: =510
+            Y: =230
+            ZIndex: =16
+
+        CustomerChargeValue As text:
+            Default: =CustomerCharge
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =230
+            ZIndex: =18
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_7 As label:
+            Text: ="Vendor Name"
+            X: =510
+            Y: =292
+            ZIndex: =17
+
+        VendorNameValue As text:
+            Default: =VendorName
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =292
+            ZIndex: =19
+
+    Group5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_16 As label:
+            Text: ="Facility"
+            X: =510
+            Y: =354
+            ZIndex: =36
+
+        FacilitySource As text:
+            Default: =FacilitySelect.Selected.Value
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =354
+            ZIndex: =37
+
+    Group6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_10 As label:
+            Text: ="Customer Name"
+            X: =510
+            Y: =416
+            ZIndex: =24
+
+        CustomerNameValue As text:
+            Default: =CustomerName
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =416
+            ZIndex: =25
+
+    Group7 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1 As label:
+            Text: ="Invoice Date"
+            X: =510
+            Y: =478
+            ZIndex: =4
+
+        InvoiceDateValue As text:
+            Default: =InvoiceDate
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =478
+            ZIndex: =5
+
+    Group8 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_12 As label:
+            DisplayMode: =DisplayMode.View
+            Text: ="Organizational Unit"
+            X: =510
+            Y: =540
+            ZIndex: =28
+
+        OrganizationalUnitSource As text:
+            Default: =OrgUnitSelect.Selected.Value
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =540
+            ZIndex: =29
+
+    Group9 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_14 As label:
+            Text: ="Gas Distribution"
+            X: =510
+            Y: =607
+            ZIndex: =32
+
+        GasDistributionValue As text:
+            Default: =GasDistribution
+            DisplayMode: =DisplayMode.Disabled
+            Width: =172
+            X: =660
+            Y: =607
+            ZIndex: =33
+
+    Group10 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_4 As label:
+            Text: ="Consumption Start Date"
+            X: =968
+            Y: =106
+            ZIndex: =12
+
+        ConsumptionStart As text:
+            BorderColor: =
+            Default: =ServiceStartDate
+            Width: =172
+            X: =1118
+            Y: =106
+            ZIndex: =14
+
+    Group11 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_5 As label:
+            Text: ="Consumption End Date"
+            X: =971
+            Y: =168
+            ZIndex: =13
+
+        ConsumptionEnd As text:
+            Default: =ServiceEndDate
+            Width: =172
+            X: =1118
+            Y: =168
+            ZIndex: =15
+
+    Group12 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_8 As label:
+            Text: ="Cost"
+            X: =968
+            Y: =230
+            ZIndex: =20
+
+        Cost As text:
+            Default: =CustomerCharge
+            Width: =172
+            X: =1118
+            Y: =230
+            ZIndex: =22
+
+    Group13 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_9 As label:
+            Text: ="Energy Provider Name"
+            X: =968
+            Y: =292
+            ZIndex: =21
+
+        EnergyProviderName As text:
+            Default: =VendorName
+            Width: =172
+            X: =1118
+            Y: =292
+            ZIndex: =23
+
+    Group14 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_17 As label:
+            Text: ="Facility"
+            X: =968
+            Y: =354
+            ZIndex: =38
+
+        facility_Sink As text:
+            Default: =FacilitySelect.Selected.Value
+            Width: =172
+            X: =1118
+            Y: =354
+            ZIndex: =39
+
+    Group15 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_11 As label:
+            Text: ="Name"
+            X: =968
+            Y: =416
+            ZIndex: =26
+
+        Name As text:
+            Default: =CustomerName
+            Width: =172
+            X: =1118
+            Y: =416
+            ZIndex: =27
+
+    Group16 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_3 As label:
+            Text: ="Transaction Date"
+            X: =968
+            Y: =478
+            ZIndex: =10
+
+        TransDate As text:
+            Default: =InvoiceDate
+            Width: =172
+            X: =1118
+            Y: =478
+            ZIndex: =11
+
+    Group17 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_13 As label:
+            Text: ="Organizational Unit"
+            X: =968
+            Y: =540
+            ZIndex: =30
+
+        OrganizationalUnitSink As text:
+            Default: =OrgUnitSelect.Selected.Value
+            Width: =172
+            X: =1118
+            Y: =540
+            ZIndex: =31
+
+    Group18 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =44
+
+        Label1_15 As label:
+            Text: ="Quantity"
+            X: =968
+            Y: =608
+            ZIndex: =34
+
+        Quantity As text:
+            Default: =GasDistribution
+            Width: =172
+            X: =1118
+            Y: =608
+            ZIndex: =35
+
+    Icon1_4 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =354
+        ZIndex: =45
+
+    Icon1_5 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =416
+        ZIndex: =46
+
+    Icon1_6 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =478
+        ZIndex: =47
+
+    Icon1_7 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =543
+        ZIndex: =48
+
+    Icon1_8 As icon.ArrowRight:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.ArrowRight
+        Width: =63
+        X: =860
+        Y: =607
+        ZIndex: =49
+
+    Label2 As label:
+        Text: |-
+            ="Maps to:"
+        Width: =108
+        X: =860
+        Y: =66
+        ZIndex: =50
+
+    Label7 As label:
+        Height: =37
+        Text: ="Confirm Mappings"
+        Width: =189
+        X: =671
+        Y: =12
+        ZIndex: =51
+
+    Button2 As button:
+        OnSelect: |
+            =ClearCollect(pdfparameters,{InvoiceID:InvoiceID,ConsumptionStartDate:ConsumptionStart.Text,ConsumptionEndDate:ConsumptionEnd.Text,Cost:Cost.Text,EnergyProviderName:EnergyProviderName.Text,Facility:facility_Sink.Text,Name:Name.Text,TransactionDueDate:TransDate.Text,OrganizationalUnit:OrgUnitSelect.Selected.Value,Quantity:Quantity.Text,Scope:ScopeSelect.Selected.Value,Category:CategorySelect.Selected.Value,InvoiceLocation:InvoiceLocationValue.Text,DataAnalyst:DataStewardInput.Text,DataOwner:DataOwnerInput.SelectedItems,Filename:DataAssetNameInput.Text,DatasetType:DataSetTypeInput.Selected.Value});
+            Set(pdfjson,JSON(pdfparameters));
+            PassParameters.Run(pdfjson,
+        Text: ="Submit"
+        X: =1160
+        Y: =698
+        ZIndex: =52
+
+    Button3 As button:
+        OnSelect: =
+        Text: ="Button"
+        X: =734
+        Y: =698
+        ZIndex: =53
+
