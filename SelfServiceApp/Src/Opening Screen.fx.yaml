@@ -14,8 +14,8 @@
             ImagePosition: =ImagePosition.Fill
             Visible: =If(ManualEnterCheckbox.Value = true,false,true)
             Width: =190
-            X: =AddMediaButton1.X
-            Y: =210
+            X: =23
+            Y: =18
             ZIndex: =2
 
         AddMediaButton1 As addMedia:
@@ -26,8 +26,8 @@
             Text: ="Select Invoice"
             Visible: =If(ManualEnterCheckbox.Value = true,false,true)
             Width: =190
-            X: =1101
-            Y: =210
+            X: =20
+            Y: =18
             ZIndex: =3
 
     DataAssetNameLabel As label:
@@ -185,7 +185,7 @@
 
     SourceContainerInput As text:
         BorderColor: =RGBA(54, 176, 75, 1)
-        Default: ="Location1"
+        Default: ="fs-pdfingestion"
         X: =40
         Y: =358
         ZIndex: =23
@@ -245,7 +245,8 @@
 
     SinkFileSystemInput As text:
         BorderColor: =RGBA(54, 176, 75, 1)
-        Default: =""
+        Default: ="pdfincoming"
+        FontWeight: =FontWeight.Lighter
         X: =863
         Y: =358
         ZIndex: =30

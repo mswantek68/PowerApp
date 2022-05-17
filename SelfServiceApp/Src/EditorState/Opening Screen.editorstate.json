@@ -82,7 +82,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AddMediaButton1",
-      "ParentIndex": 12,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -745,7 +745,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dataanalystLabel",
-      "ParentIndex": 10,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1014,7 +1014,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataAssetNameInput",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1276,7 +1276,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataAssetNameLabel",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1851,7 +1851,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataOwnerLabel",
-      "ParentIndex": 9,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4108,7 +4108,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DescriptionInput",
-      "ParentIndex": 8,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4383,7 +4383,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DescriptionLabel",
-      "ParentIndex": 5,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5248,7 +5248,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "InvoiceLocationLabel",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5530,7 +5530,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "InvoiceLocationValue",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6094,7 +6094,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label11_1",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6906,7 +6906,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ManualEnterCheckbox",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7203,7 +7203,14 @@
         "PressedFill",
         "HoverFill",
         "Font",
-        "FontWeight",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "FontWeight",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Align",
         "X",
         "Y",
@@ -10521,7 +10528,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "UploadedImage1",
-      "ParentIndex": 11,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

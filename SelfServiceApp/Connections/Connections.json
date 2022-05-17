@@ -1,24 +1,4 @@
 {
-  "07c9d530-0511-4f24-a304-8d3d342f4b81": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
-    "connectionRef": {
-      "apiTier": "Premium",
-      "displayName": "Azure Data Lake",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1511/1.0.1511.2542/azuredatalake/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_azuredatalake",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "AzureDataLake"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "07c9d530-0511-4f24-a304-8d3d342f4b81"
-  },
   "0bfe23c1-b79e-499a-bb2c-3f7349462409": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-121.westus.logic.azure.com:443/workflows/adf26fd8199a49fb9c069ef10c2a8bea/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=naSpD4BWn-PFVaSqWa0_Gvbn4NXNAie1zXziORFHYd0",
