@@ -102,6 +102,7 @@
     "Opening Screen",
     "Add Metadata Screen",
     "Review pdf ingestion Screen",
-    "Screen4"
+    "Screen4",
+    "SuccessScreen"
   ]
 }

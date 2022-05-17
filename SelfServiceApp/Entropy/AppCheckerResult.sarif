@@ -1183,19 +1183,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Opening Screen'.FrequencyDropDown.AccessibleLabel"
+                  "fullyQualifiedName": "'Opening Screen'.DataSetTypeInput.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Opening Screen'.FrequencyDropDown.AccessibleLabel",
+                  "fullyQualifiedName": "'Opening Screen'.DataSetTypeInput.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Opening Screen",
-                "type": "'Opening Screen'.FrequencyDropDown"
+                "type": "'Opening Screen'.DataSetTypeInput"
               }
             }
           ],
@@ -1256,36 +1256,6 @@
                 "member": "AccessibleLabel",
                 "module": "Opening Screen",
                 "type": "'Opening Screen'.SourceFolderPathInput"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Opening Screen'.DataSetTypeInput.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Opening Screen'.DataSetTypeInput.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Opening Screen",
-                "type": "'Opening Screen'.DataSetTypeInput"
               }
             }
           ],
@@ -1376,6 +1346,36 @@
                 "member": "AccessibleLabel",
                 "module": "Opening Screen",
                 "type": "'Opening Screen'.StartTimeInput"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Opening Screen'.FrequencyDropDown.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Opening Screen'.FrequencyDropDown.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Opening Screen",
+                "type": "'Opening Screen'.FrequencyDropDown"
               }
             }
           ],
