@@ -130,6 +130,27 @@
     "dependents": [],
     "id": "601c7dfb-2908-489e-834f-d65948f2b37d"
   },
+  "6b285cf7-4964-4aeb-9af4-b8dc457118b6": {
+    "connectionParameters": {
+      "accountName": "mcfsdevusest01",
+      "authType": "basic",
+      "privacySetting": "None"
+    },
+    "connectionRef": {
+      "authenticationType": "keyBasedAuth",
+      "displayName": "Azure Blob Storage",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/azureblob/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_azureblob",
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_azureblob/connections/5a7ccd79bbfc453da5d9b897bc436174"
+    },
+    "datasets": {},
+    "dataSources": [
+      "AzureBlobStorage_1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6b285cf7-4964-4aeb-9af4-b8dc457118b6"
+  },
   "6fe07240-3901-45a0-afa4-91092832532d": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-94.westus.logic.azure.com:443/workflows/83274dd8acd3481bbad1d336af191a06/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=uskNmSlVZb-5tkQyEabGps2-ds-ea-1n5zcXn1QeqFo",
@@ -191,14 +212,32 @@
       "xrmConnectionReferenceLogicalName": "new_sharedazureblob_49c65"
     },
     "datasets": {},
-    "dataSources": [
-      "AzureBlobStorage"
-    ],
+    "dataSources": [],
     "dependencies": {},
     "dependents": [
       "6fe07240-3901-45a0-afa4-91092832532d"
     ],
     "id": "99d13012-5e91-4f97-8a07-24bc2aa0f273"
+  },
+  "cabe8815-fcfe-4aed-aa51-3c8366238f68": {
+    "connectionParameters": {
+      "accountName": "mcfsdeveunblob01"
+    },
+    "connectionRef": {
+      "authenticationType": "keyBasedAuth",
+      "displayName": "Azure Blob Storage",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/azureblob/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_azureblob",
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_azureblob/connections/2679e5427dbf40eb9a6c001bb9d44b48",
+      "xrmConnectionReferenceLogicalName": "new_sharedazureblob_f3cc6"
+    },
+    "datasets": {},
+    "dataSources": [
+      "AzureBlobStorage"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "cabe8815-fcfe-4aed-aa51-3c8366238f68"
   },
   "eaa89d94-a8e4-46fa-b0a4-28f1f63e7caf": {
     "connectionParameters": {
