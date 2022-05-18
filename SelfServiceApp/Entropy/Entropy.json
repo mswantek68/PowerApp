@@ -139,7 +139,7 @@
     "VendorNameValue": 29
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/17/2022 23:36:54",
+  "HeaderLastSavedDateTimeUTC": "05/18/2022 01:42:18",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1821b1cf-04dc-481f-8fa8-abbf3b551fdb": "\"/providers/microsoft.powerapps/apis/shared_azureblob/connections/shared-azureblob-fd6ea19e-f366-4ae5-9505-dc3654d8fcf3\"",
@@ -410,7 +410,7 @@
   },
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.9319217,
+    "AnalysisLoadTime": 0.7236032,
     "ControlCount": {
       "addMedia": 1,
       "arrow": 3,
@@ -429,7 +429,7 @@
       "screen": 5,
       "text": 28
     },
-    "DeserializationLoadTime": 2.5159905,
+    "DeserializationLoadTime": 1.3540596,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": true

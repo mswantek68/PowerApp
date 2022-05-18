@@ -83,7 +83,7 @@
         ZIndex: =10
 
     Arrow1_1 As arrow:
-        DisplayMode: =If(IsBlank(DataAssetNameInput.Text) || IsBlank(DataOwnerInput.SelectedItems) || IsBlank(DataSetTypeInput.SelectedText) || IsBlank(AddMediaWithImage1),DisplayMode.Disabled,DisplayMode.Edit)
+        DisplayMode: =If(IsBlank(DataAssetNameInput.Text) || IsBlank(DataOwnerInput.SelectedItems) || IsBlank(DataSetTypeInput.SelectedText) || IsBlank(AddMediaButton1.Media),DisplayMode.Disabled,DisplayMode.Edit)
         OnSelect: =Navigate('Add Metadata Screen')
         X: =1278
         Y: =690
