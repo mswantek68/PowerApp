@@ -18,31 +18,11 @@
     "dependencies": {},
     "dependents": [
       "69ce0aa4-f9d2-4707-948b-16214f3077fe",
-      "5b245eb7-0ddf-4184-9900-b5ec4340a3d1"
+      "1c8c6190-9d22-4703-8543-d032dc8bdb66"
     ],
     "id": "1821b1cf-04dc-481f-8fa8-abbf3b551fdb"
   },
-  "2f31c3b2-502d-46e4-ab53-18ce3b41f915": {
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Office 365 Users",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1573/1.0.1573.2770/office365users/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [
-      "Office365Users"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "2f31c3b2-502d-46e4-ab53-18ce3b41f915"
-  },
-  "5b245eb7-0ddf-4184-9900-b5ec4340a3d1": {
+  "1c8c6190-9d22-4703-8543-d032dc8bdb66": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-94.westus.logic.azure.com:443/workflows/83274dd8acd3481bbad1d336af191a06/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=uskNmSlVZb-5tkQyEabGps2-ds-ea-1n5zcXn1QeqFo",
       "workflowEndpoint": "/subscriptions/5c340b36-e0fa-450e-b6c2-cb7e0327fc56/resourceGroups/b713b312916f44f9a1c71f61d1d8662c-defaultb713b312916f44f9a1c71f61d1d8662c-env/providers/Microsoft.Logic/workflows/abec6b75-7e68-1249-30f3-9b891523a9f9",
@@ -85,7 +65,27 @@
       "shared_azureblob": "1821b1cf-04dc-481f-8fa8-abbf3b551fdb"
     },
     "dependents": [],
-    "id": "5b245eb7-0ddf-4184-9900-b5ec4340a3d1"
+    "id": "1c8c6190-9d22-4703-8543-d032dc8bdb66"
+  },
+  "2f31c3b2-502d-46e4-ab53-18ce3b41f915": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1573/1.0.1573.2770/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "2f31c3b2-502d-46e4-ab53-18ce3b41f915"
   },
   "69ce0aa4-f9d2-4707-948b-16214f3077fe": {
     "connectionParameters": {

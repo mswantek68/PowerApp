@@ -515,3 +515,12 @@
         Y: =700
         ZIndex: =53
 
+    Button2 As button:
+        OnSelect: |-
+            =Set(pdfParse,"{'InvoiceID':'"& InvoiceID &"','ConsumptionStartDate':'"& ConsumptionStart.Text &"','ConsumptionEndDate':'"& ConsumptionEnd.Text &"','Cost':'"& Cost.Text &"','EnergyProviderName':'"& EnergyProviderName.Text &"','Facility':'"& facility_Sink.Text &"','Name':'"& Name.Text &"','TransactionDueDate': '" & TransDate.Text &"','OrganizationalUnit':'"& OrgUnitSelect.Selected.Value &"','Quantity':'"& Quantity.Text &"','Scope':'"& ScopeSelect.Selected.Value &"','Category':'"& CategorySelect.Selected.Value &"','InvoiceLocation':'"& InvoiceLocationValue.Text & "','DataAnalyst':'"& DataStewardInput.Text &"','DataOwner':'"& DataOwnerInput.Selected.DisplayName &"','Filename':'"& DataAssetNameInput.Text & "','DatasetType':'"& DataSetTypeInput.Selected.Value &"','SinkFileSystem':'"& SinkFileSystemInput.Text &"','SinkFolderPath':'"& SinkFolderPathInput.Text &"','SourceContainerName':'"& SourceContainerInput.Text &"','SourceFolderPath':'"& SourceFolderPathInput.Text & "','AddTrigger':'"& AddTriggerInput.Value &"'}");
+            PassParametersToControl.Run(pdfParse);
+        Text: ="Button"
+        X: =611
+        Y: =700
+        ZIndex: =54
+
