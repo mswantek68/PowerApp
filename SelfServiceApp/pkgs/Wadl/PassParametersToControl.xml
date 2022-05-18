@@ -2,10 +2,7 @@
   <doc title="PassParametersToControl" />
   <grammars>
     <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
-      <object name="ManualTriggerInput_Initializevarpdffields_Value_def" />
-      <object name="ManualTriggerInput">
-        <property name="Initializevarpdffields_Value" typeRef="ManualTriggerInput_Initializevarpdffields_Value_def" />
-      </object>
+      <object name="ManualTriggerInput" />
     </jsonTypes>
   </grammars>
   <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/logicflows">
@@ -17,9 +14,7 @@
           <param style="query" name="api-version" type="xs:string" required="true" fixed="2015-02-01-preview">
             <doc title="The api version" />
           </param>
-          <representation mediaType="application/json">
-            <param style="plain" name="Initializevarpdffields_Value" path="/Initializevarpdffields_Value" type="service:ManualTriggerInput_Initializevarpdffields_Value_def" required="true" />
-          </representation>
+          <representation mediaType="application/json" />
         </request>
       </method>
     </resource>
